@@ -1,28 +1,53 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <LandingPage/>
+    <DetailPage v-bind:opinions="opinions"/>
+    <OpinionPage v-on:form-data="saveOpinion"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LandingPage from "./components/LandingPage.vue";
+import DetailPage from "./components/DetailPage.vue";
+import OpinionPage from "./components/OpinionPage.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    LandingPage,
+    DetailPage,
+    OpinionPage
+  },
+  data() {
+    return {
+      opinions: []
+    }
+  },
+  methods: {
+    saveOpinion(formData) {
+      this.opinions.push(formData);
+    }
   }
-}
+};
 </script>
 
 <style>
+html {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
