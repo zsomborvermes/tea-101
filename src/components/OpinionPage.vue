@@ -37,7 +37,7 @@ export default {
           text: ""
         };
       } else {
-        alert("Please fill out every part of the from!");
+        alert("Please fill out every part of the form!");
       }
     }
   }

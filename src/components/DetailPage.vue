@@ -22,7 +22,7 @@
         <img
           src="http://factsanddetails.com/media/2/20111107-Wiki%20C%20%20TV%20Keye_Luke_Master_Po_Kung_Fu.JPG"
         >
-        <p id="label">Antikrisztus {{ this.opinions[this.opinions.length - 1].name }}</p>
+        <p id="label">{{ this.opinions[this.opinions.length - 1].name }}</p>
       </div>
       <div class="opinion-text">
         <p>"{{ this.opinions[this.opinions.length - 1].text }}"</p>
@@ -65,7 +65,7 @@ export default {
 }
 
 #label {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
 }
 
