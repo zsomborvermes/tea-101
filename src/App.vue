@@ -2,7 +2,7 @@
   <div id="app">
     <LandingPage/>
     <DetailPage v-bind:opinions="opinions"/>
-    <OpinionPage v-on:form-data="saveOpinion"/>
+    <OpinionPage v-on:form-submit="saveOpinion"/>
   </div>
 </template>
 
